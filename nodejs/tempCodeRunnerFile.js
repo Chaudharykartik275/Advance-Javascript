@@ -1,7 +1,9 @@
-function doingStuff(){
-//   if(true){
-//     console.log(x);
-//     var x ="local";
-//   }
+function doOuterFunctionStuff(nr){
+//     doInnerFunctionStuff(nr);
+//     function doInnerFunctionStuff(x){
+//         let z = 10;
+//     }
+//         console.log("Not accesible:",z);
+    
 // }
-// doingStuff();
+// doOuterFunctionStuff(3);

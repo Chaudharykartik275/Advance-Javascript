@@ -196,9 +196,165 @@
 // creatingnewscope("some parameters");
 // console.log("still available",globalvar)
 
-let x ="global";
-function doingStuff(){
-  let x ="local";
-  console.log(x)
-}
+// let x = "global";
 
+// function doingStuff() {
+//   let x = "local";
+//   console.log("Inside function:", x); 
+// }
+
+// doingStuff();
+// console.log("Outside function:", x); 
+
+
+// IIFE(Immediately Invoked Function Expression)
+// (function(){
+//     console.log("IIFE!");
+// })();
+
+// (()=>{
+//     console.log("run right away");
+// })();
+
+
+// Recursive Function
+// function getRecursive(nr) {
+//     console.log(nr);
+//     getRecursive(--nr);
+// }
+// getRecursive(3);
+// Memory stack overflow:When infinite loop terminates itself
+
+// Case1
+// function getRecursive(nr) {
+//     console.log(nr);
+//     if(nr>0){
+//         getRecursive(--nr);
+//     }
+// }
+// getRecursive(3);
+
+//Case2
+// function getRecursive(nr) {
+//     if (nr > 0) {
+//         getRecursive(--nr);
+//     }
+//     console.log(nr);
+// }
+// getRecursive(3);
+
+// function logRecursive(nr) {
+//     console.log("Started function:",nr);
+//     if(nr>0){
+//         logRecursive(nr - 1);
+//     }else{
+//         console.log("done with recurion");
+
+//     }
+//     console.log("ended function:",nr)
+// }
+// logRecursive(3);
+
+// the performance of recursion is slightly worse than the performance of regular iteration using a loop .So if this cause a bottleneckj situation that would really slow down your applicatiob then you might want to considdder another approach
+
+
+// Nested Functions
+// function doOuterFunctionStuff(nr){
+//     console.log("outer function");
+//     doInnerFunctionStuff(nr);
+//     function doInnerFunctionStuff(x){
+//         console.log(x+7);
+//         console.log("I can access outer variable:",nr);
+//     }
+// }
+// doOuterFunctionStuff(3);
+
+// function doOuterFunctionStuff(nr){
+//     doInnerFunctionStuff(nr);
+//     function doInnerFunctionStuff(x){
+//         let z = 10;
+//     }
+//         console.log("Not accesible:",z);
+    
+// }
+// doOuterFunctionStuff(3);
+
+// function doOuterFunctionStuff(nr){
+//     doInnerFunctionStuff(nr);
+//     function doInnerFunctionStuff(x){
+//         let z = 10;
+//     }
+//         console.log("Not accesible:",z);
+    
+// }
+// doInnerFunctionStuff(3);
+// [Inner function is not defined]
+  
+// Function Callbacks
+// let functionVariable=function(){
+//     console.log("not so secret though");
+// }
+// function doFlexbleStuff(executeStuff){
+//     executeStuff();
+//     console.log("Inside doFLexibleStuffFucntion");
+// }
+// doFlexbleStuff(functionVariable);
+
+// let youGotThis=function(){
+//     console.log("You are doing really well,keep coding!");
+// };
+// setTimeout(youGotThis,1000);
+
+// let youGotThis=function(){
+//     console.log("You are doing really well,keep coding!");
+// };
+// setTimeout(youGotThis,1000);
+
+// setInterval(youGotThis,1000);
+
+// Quiz
+
+// 1.
+// let val =10;
+//  function tester(val){
+//     val+=10;
+//     if(val<100){
+//         return tester(val);
+//     }
+//     return val;
+//  }
+//  tester(val);
+//  console.log(val);
+
+// 2.
+// let testFunction=function(){
+//     console.log("Hello");
+// }();
+
+// 3.
+// (function(){
+//     console.log("Welcome");
+// })();
+
+// (function(){
+//     let firstname="Laurence";
+// })();
+// let result=(function(){
+//     let firstname="Laurence";
+//     return firstname;
+// })();
+// console.log(result);
+// (function(firstname){
+//     console.log("My name is "+ firstname);
+// })("Laurence");
+
+// 4.
+// let test2=(num)=>num+5;
+// console.log(test2(14));
+
+// 5.
+var addFive1=function addFive1(num){
+    return num+2;
+};
+let addFive2=(num)=>num+2;
+console.log(addFive1(14));
