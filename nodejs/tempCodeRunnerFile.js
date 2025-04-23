@@ -1,5 +1,5 @@
- {
-//     console.log("you are doing really good");
-// };
-// // setTimeout(youGotThis,1000);
-// setInterval(youGotThis,1000);
+const fruits = new Map([
+    ["apples", 500],
+    ["bananas", 400],
+    ["oranges", 200]
+]);
