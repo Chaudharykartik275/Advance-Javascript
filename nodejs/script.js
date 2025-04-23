@@ -353,8 +353,76 @@
 // console.log(test2(14));
 
 // 5.
-var addFive1=function addFive1(num){
-    return num+2;
-};
-let addFive2=(num)=>num+2;
-console.log(addFive1(14));
+// var addFive1=function addFive1(num){
+//     return num+2;
+// };
+// let addFive2=(num)=>num+2;
+// console.log(addFive1(14));
+
+
+// (function () {
+//     console.log("IIFE");
+// })();
+
+
+// (()=> {
+//     console.log("run right away");
+// })();
+
+
+//recursive functions 
+// function getRecursive(nr) {
+//     console.log(nr);
+//     if(nr > 0 ) {
+//         getRecursive(--nr);
+//     }
+// }
+// getRecursive(3);
+
+
+// function logRecursive(nr) {
+//     console.log("Started function",nr);
+//     if(nr > 0) {
+//         logRecursive(nr-1);
+//     }
+//     else{
+//         console.log("ended fn",nr);
+//     }
+//     logRecursive(3);
+// }
+
+//nested function 
+// function doOuterFunctionStuff(nr) {
+//     console.log("outer functions");
+//     doInnerFunctionStuff(x) {
+//         console.log(x+7);
+//         console.log("I can access innner variables",nr);
+//     }
+// }
+
+
+// let functionVariable = function() {
+//     console.log("Not so secret though");
+// }
+
+
+// function callbacks 
+// function doFlexibleStuff(executeStuff) {
+//     executeStuff();
+//     console.log("Inside doFlexibleStuff");
+// }
+
+// let youGotThis = function() {
+//     console.log("you are doing really good");
+// };
+// // setTimeout(youGotThis,1000);
+// setInterval(youGotThis,1000);
+
+// let val = 10;
+// function tester(val) {
+//     val += 10;
+//     if(val <100) {
+//         return tester(val)
+//     }
+// }
+
