@@ -1,5 +1,2 @@
-const fruits = new Map([
-    ["apples", 500],
-    ["bananas", 400],
-    ["oranges", 200]
-]);
+const fruits = ["Bananas", "Oranges", "Apples", "Mango"];
+// console.log(fruits.includes("Mango"));
