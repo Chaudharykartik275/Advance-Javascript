@@ -1,214 +1,167 @@
-// // Classes and Objects.
-// // Objects are the collection of the properties and methods.
+// // const fruit=new Map([
+// //     ['apple', 1],
+// //     ['banana', 2],
+// //     ['orange', 3],
+// // ])
+// // console.log(fruit) 
 
-// class ClassName{
-//     constructor(prop1, prop2){                // first element of the class is constructor.
-//         this.prop1 = prop1;
-//         this.prop2 = prop2;
-//     }
+// const fruit=new Map();
+// fruit.set("apple",200);
+// fruit.set("banana",300);
+// fruit.set("orange",400);
+// // console.log(fruit.get("banana")) //300
+// // console.log(fruit.has("banana")) //true 
+// // console.log(fruit.has("kiwi")) //false
+// // console.log(fruit.size) //3
+// // fruit.delete("banana")
+// // console.log(fruit.has("banana")) //false
+// // console.log(fruit.size) //2
+// // console.log(fruit.keys()) //MapIterator {"apple", "orange"}
+// // console.log(fruit.values()) //MapIterator {200, 400}
+// console.log(fruit)
+// fruits.set(oranges, 200);
+// const fruits=[
+//     {name:"apple",color:"red"},
+//     {name:"banana",color:"yellow"},
+//     {name:"orange",color:"orange"},
+//     {name:"kiwi",color:"green"},
+//     {name:"grape",color:"purple"},
+// ]
+// const fruitMap=new Map();
+// console.log(fruit)
+//destructuring 
+//  const person ={
+//     fristname: "john",
+//     lastname: "dev",
+//     age:60
+//  };
+ // destructuring is not destructive
+//  let{a1, a2 ,a3,a4,a5}=name
+ //A map holds a key value pair where the keys can be any datatypes
+//remembers the original insertion
+//Creation of Map
+// const fruits=new Map([["apples",500],["bananas",300],["Oranges",200]]);
+// console.log(fruits);
+
+// const fruits=new Map();
+// fruits.set("apple",500);
+// fruits.set("bananas",300);
+// fruits.set("oranges",200);
+// fruits.set("oranges",500);
+// console.log(fruits);
+// console.log(fruits.size);
+// console.log(fruits.get("apple"));
+// //fruits.delete("apple");
+// console.log(fruits.size);
+// console.log(fruits.has("apple"));
+
+//for Each
+// let text="";
+// fruits.forEach(function(value,key){
+//     text+=key+'='+ value+" ";
+// })
+// console.log(text);
+//Map.entries()
+// let text="";
+// for(const x of fruits.entries()){
+//     text+=x;
 // }
-// let Obj = new ClassName("arg1", "arg2");
-// console.log(Obj.prop1);
-// console.log(Obj.prop2);
+// console.log(text)
 
 
-
-// class Dog{
-//     constructor(dogName, Weight, color,Breed){
-//         this.dogName = dogName;                               // this.dogName is a formal argument, and dogName is the variable
-//         this.Weight = Weight;
-//         this.color = color;
-//         this.Bread = Breed;
-//     }
+// let text="";
+// for(const x of fruits.keys()){
+//     text+=x+" ";
 // }
-// let dog = new Dog("JavaScript", 2.4, "brown", "chihuahua");
-// console.log(dog.dogName);
-// console.log(dog.Weight);
-// console.log(dog.color);
-// console.log(dog.Breed);
+// console.log(text);
 
-// // There can only be one constructor in a class.
-
-
-
-
-// class Person{
-//     constructor(firstName, lastName){
-//         this.firstName = firstName;
-//         this.lastName = lastName;
-//     }
+// let text=0;
+// for(const x of fruits.values()){
+//     text+=x;
 // }
-// let p = new Person("Maaike", "van Putten");
-// console.log("Hi",p.firstName);
+// console.log(text);
+
+//Object as keys
+// create objects
+// const apples={name:'Apples'};
+// const bananas={name:'bananas'};
+// const orange={name:'orange'};
+
+// //create a map
+// const fruits=new Map();
+// //Add new elemants to the map
+// fruits.set(apples,200);
+// fruits.set(bananas,500);
+// fruits.set(orange,300);
+
+// const fruits=[{name:"apples",quantity:300},
+//     {name:"bananas",quantity:500},
+//     {name:"oranges",quantity:200},
+//     {name:"kiwi",quantity:150}
+// ];
+// function myCallback({quantity}){
+//     return quantity>200?"ok":"low";
+// } 
+// const result=Map.groupBy(fruits,myCallback);
+// console.log(result);
 
 
+//structuring
+
+// const person={
+//     firstName:"John",
+//     lastNmae:"Doe",
+//     age:50
+
+// };
+// console.log(person);
+
+// Destructuring
+
+// let{firstName,lastNmae}=person;
+// let{age}=person;
+// console.log(firstName);
+// console.log(lastNmae);
+// console.log(age);
+////Destructuring is not destructive
+//let{firstName,lastNmae,counrtry="US"}=person;
 
 
-//// When defining these methods, we don't need to use the function keyword. we start directly with the name.
+//String destructuring
+// let name="GurukulTheSchools";
+// let[a1,a2,a3,a4,a5]= name;
 
-//  class Person{
-//     constructor(firstName,lastName){
-//         this.firstName = firstName;
-//         this.lastName = lastName;
-//     }
-//     greet(){
-//         console.log("Hi there! I'm",this.firstName);
-//     }
-//  }
-//  let p = new Person()
+//Swapping javaScript variables
+// let firstName="John";
+// let lastName="Doe";
+// [firstName,lastName]=[lastName,firstName];
 
+// let x=5;
+// let z=x**2;// x is not modified
+// console.log(z);
+// let z1=Math.pow(x,2);
+// console.log(z1);
+//Swapping javaScript variables
+// let firstName="John";
+// let lastName="Doe";
+// [firstName,lastName]=[lastName,firstName];
 
+// let x=5;
+// let z=x**2;// x is not modified
+// console.log(z);
+// let z1=Math.pow(x,2);
+// console.log(z1);
+//Swapping javaScript variables
+// let firstName="John";
+// let lastName="Doe";
+// [firstName,lastName]=[lastName,firstName];
 
-
-// class Person {
-//     constructor(firstName, lastName) {
-//         this.firstName = firstName;
-//         this.lastName = lastName;
-//     }
-
-//     greet() {
-//         console.log("Hi there!");
-//     }
-
-//     compliment(name, object) {
-//         return "That is a wonderful " + object + ", " + name;
-//     }
-// }
-
-// // Creating an instance of the Person class
-// let p = new Person("John", "Doe");
-
-// // Calling the compliment method
-// let compliment = p.compliment("Harry", "hat");
-// console.log(compliment);
-
-
-
-// methods
-
-// class Person{
-//     constructor(firstname,lastname){
-//         this.firstname=firstname;
-//         this.lastname=lastname;
-//     }
-//     greet(){
-//         console.log("hi there! I'm",this.firstname);
-//     }
-// }
-// let p=new Person("kartikey","Patel");
-// p.greet();
-
-//Properties
-// class Person{
-//         constructor(firstname,lastname){
-//             this.firstname=firstname;
-//             this.lastname=lastname;
-//         }
-//     }
-//     let p=new Person("kartikey","Patel");
-//    console.log("hi",p.firstname);
-
-
-// class Person{
-//     #firstname;
-//     #lastname;
-//     constructor(firstname,lastname){
-//         this.#firstname=firstname;
-//         this.#lastname=lastname;
-//     }
-// }
-// let p=new Person("Kartik","Chaudhary");
-// console.log("hi",p.firstname);
-
-
-// class Person{
-//     #firstname;
-//     #lastname;
-//     constructor(firstname,lastname){
-//         if(firstname.startWith("M")){
-//             this.#firstname=firstname;
-//         }else{
-//             this.#firstname="M"+firstname;
-//         }
-//         this.#lastname=lastname;
-//     }
-// }
-// let p=new Person("kay","moon");
-
-
-
-//GETTERS and SETTERS
-
-
-
-// class Person{
-//     #firstname;
-//     #lastname;
-//     constructor(firstname,lastname){
-//         this.#firstname=firstname;
-//         this.#lastname=lastname;
-//     }
-//     get firstname(){
-//         return this.#firstname; //always return keyword use 
-//     }
-//     set firstname(firstname){
-//         this.#firstname=firstname;// set are use for reinitialized the value
-//     }
-//     get lastname(){
-//         return this.#lastname;
-//     }
-//     set lastname(lastname){
-//         this.#lastname=lastname;
-//     }
-// }
-// let p=new Person("kartikey","Patel");
-// console.log(p.firstname);
-
-
-
-// //INHERITENCE
-// class Vehicle{
-//     constructor(color,currentSpeed,maxSpeed){
-//         this.color=color;
-//         this.currentSpeed=currentSpeed;
-//         this.maxSpeed=maxSpeed;
-//     }
-//     move(){
-//         console.log("moving at",this.currentSpeed);
-//     }
-//     accelerate(amount){
-//         this.currentSpeed+=amount;
-//     }
-// }
-// class Motorcycle extends Vehicle{
-//     constructor(color,currentSpeed,maxSpeed,fuel){
-//         super(color,currentSpeed,maxSpeed);//super word in the constructor is calling the constructor fromo the parent
-//         this.fuel=this.fuel;
-//     }
-//     doWheelie(){
-//         console.log("Driving on one wheel!");
-//     }
-// }
-// let motor=new Motorcycle("Black",0,250,"gasoline");
-// console.log(motor.maxSpeed);
-// motor.accelerate(50);
-// motor.move();// wecannot acces any motorcycle specific properties or methods in our vehicle class
-
-//PROTOTYPES
-
-class Person{
-    constructor(firstname,lastname){
-        this.firstname=firstname;
-        this.lastname=lastname;
-    }
-    greet(){
-        console.log("hi there");
-    }
-}
-Person.prototype.introduce=function(){
-    console.log("Hi,I'm",this.firstname);
-};
-Person.prototype.favoriteColor="green";
-let p=new Person("Maria","Saga");
-console.log(p.favoriteColor);
-p.introduce();
+// let x=5;
+// let z=x**2;// x is not modified
+// console.log(z);
+// let z1=Math.pow(x,2);
+// console.log(z1);
+// let x=5;
+// x**=2;
+// console.log(x);
+// trailing comma
