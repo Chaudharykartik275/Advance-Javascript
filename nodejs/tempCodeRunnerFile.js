@@ -1,5 +1,8 @@
-let x=5;
-let z=x**2;// x is not modified
-console.log(z);
-let z1=Math.pow(x,2);
-console.log(z1);
+console.log("Hi there!");
+// setTimeout(() => {
+//     console.log("Sorry I am late!");
+// }, 1000);
+// console.log(add(4,5));
+// function add(x,y){
+//     return x+y;
+// }
